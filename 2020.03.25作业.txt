@@ -1,0 +1,49 @@
+第一题：
+function fn() {
+let res = null,
+function createNum(list) {
+return isNaN(list) ? 0 : list;
+}
+Array.from(arguments).forEach(element => {
+item = createNum(element);
+list = list + element;
+});
+return function () {
+Array.from(arguments).forEach(element => {
+item = createNum(element);
+list = list + element;
+}
+第五题：
+"tomandefindejoin"
+第九题：
+(function () {
+function unique() {
+let obj = {};
+for (let i = 0; i < this.length; i++) {
+let item = this[i];
+if (obj[item] !== undefined) {
+this[i] = this[this.length - 1];
+this.length--;
+i--;
+ continue;
+}
+obj[item] = item;
+}
+        obj = null;
+        return this;
+    }
+    Array.prototype.myunique = unique;
+    ary = ary.myunique().sort((a, b) => a - b);
+    console.log(ary)
+})()
+第十题：
+（function(){
+dunction getparam(key){
+let list;
+this.repace(/[^?#=&]+)=([^?#=&]+)/g,(_,$1,$2)=>{
+$1===key?list=$2:null;
+});
+return value;
+}
+String.prototype.getparam=getParam;
+})()
